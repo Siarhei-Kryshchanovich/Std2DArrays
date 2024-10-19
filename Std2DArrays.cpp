@@ -7,10 +7,10 @@ void fillArray(array <array<int, MAXNUMBEROFCOLUMNS>, MAXNUMBEROFROWS>& arr, int
 		throw invalid_argument("Incorrect number of rows or columns");
 	}
 	int startValue = 1;
-	for (int i = 0; i < rows; i++){
-		for (int j = 0; j < columns; j++) {
-			arr[i][j] = startValue;
-			startValue++;
+	// SE VER filling
+	for (int col = columns - 1; col >= 0; --col) {
+		for (int row = rows - 1; row >= 0; --row) {
+			arr[row][col] = startValue++;
 		}
 	}
 }
